@@ -1,0 +1,80 @@
+
+class CfgMovesBasic
+{
+	class DefaultDie;
+	class ManActions
+	{
+
+		CUP_GestureReloadBolt1 = "CUP_GestureReloadBolt1";
+		CUP_GestureRechamberKSVK = "CUP_GestureRechamberKSVK";
+
+	};
+	class Actions
+	{
+		class NoActions: ManActions
+		{
+			CUP_GestureRechamberKSVK[] = {"CUP_GestureRechamberKSVK","Gesture"};
+		};
+		class RifleBaseStandActions;
+		class RifleProneActions: RifleBaseStandActions
+		{
+			CUP_GestureRechamberKSVK[] = {"CUP_GestureRechamberKSVK_prone","Gesture"};
+		};
+		class RifleAdjustProneBaseActions;
+		class RifleAdjustRProneActions: RifleAdjustProneBaseActions
+		{
+			CUP_GestureRechamberKSVK[] = {"CUP_GestureRechamberKSVK_Context","Gesture"};
+		};
+		class RifleAdjustLProneActions: RifleAdjustProneBaseActions
+		{
+			CUP_GestureRechamberKSVK[] = {"CUP_GestureRechamberKSVK_Context","Gesture"};
+
+			class RifleAdjustFProneActions: RifleAdjustProneBaseActions
+			{
+				CUP_GestureRechamberKSVK[] = {"CUP_GestureRechamberKSVK_Context","Gesture"};
+			};
+		};
+	};
+};
+class CfgGesturesMale
+{
+	class Default;
+	class States
+	{
+		class CUP_GestureRechamberKSVK: Default
+		{
+			file = "CUP\Weapons\CUP_Weapons_WeaponsCore\anim\RechamberBoltKSVK\RechamberBoltKSVK_standing.rtm";
+			looped = 0;
+			speed = -2;
+			mask = "handsWeapon";
+			headBobStrength = 0.3;
+			headBobMode = 2;
+			rightHandIKCurve[] = {0,1,0.06667,0,0.75,0,0.833333,1};
+			leftHandIKCurve[] = {0,1,1,1};
+			leftHandIKBeg = 1;
+			leftHandIKEnd = 1;
+			rightHandIKBeg = 1;
+			rightHandIKEnd = 1;
+		};
+		class CUP_GestureRechamberKSVK_Prone: Default
+		{
+			file = "CUP\Weapons\CUP_Weapons_WeaponsCore\anim\RechamberBoltKSVK\RechamberBoltKSVK_prone.rtm";
+			looped = 0;
+			speed = -2;
+			mask = "handsWeapon";
+			headBobStrength = 0.1;
+			headBobMode = 2;
+			leftHandIKBeg = 1;
+			leftHandIKCurve[] = {0,1,1,1};
+			leftHandIKEnd = 1;
+			rightHandIKBeg = 1;
+			rightHandIKCurve[] = {0,1,0.06667,0,0.75,0,0.833333,1};
+			rightHandIKEnd = 1;
+		};
+		class CUP_GestureRechamberKSVK_Context: CUP_GestureRechamberKSVK
+		{
+			mask = "handsWeapon_context";
+		};
+		
+	};
+};
