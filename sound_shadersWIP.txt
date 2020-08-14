@@ -1,0 +1,77 @@
+class CfgSoundShaders
+{
+
+	class CUP_AS50_closeShot_SoundShader
+	{
+		samples[] = {{"CUP\Weapons\CUP_Weapons_SoundShaders\sounds\AS50\AS50_closeShot",1}};
+		volume = 1;
+		range = 120;
+		rangeCurve = "CUP_closeShotCurve";
+	};
+
+};
+class CfgSoundSets
+{
+	class CUP_AS50_Shot_SoundSet
+	{
+		soundShaders[] = {"CUP_AS50_closeShot_SoundShader","GM6Lynx_midShot_SoundShader","GM6Lynx_distShot_SoundShader"};
+		volumeFactor = 1.6;
+		volumeCurve = "InverseSquare2Curve";
+		occlusionFactor = 0.5;
+		obstructionFactor = 0.3;
+		spatial = 1;
+		doppler = 0;
+		loop = 0;
+		sound3DProcessingType = "WeaponMediumShot3DProcessingType";
+		distanceFilter = "weaponShotDistanceFreqAttenuationFilter";
+	};
+
+
+
+
+
+
+	class CUP_BoltActions_Tail_SoundSet
+	{
+		soundShaders[] = {"MMG01_tailForest_SoundShader","MMG01_tailHouses_SoundShader","MMG01_tailInterior_SoundShader","MMG01_tailMeadows_SoundShader","MMG01_tailTrees_SoundShader"};
+		volumeFactor = 1;
+		volumeCurve = "CUP_rifleSoundCurve";
+		occlusionFactor = 0.5;
+		obstructionFactor = 0.3;
+		spatial = 1;
+		doppler = 0;
+		loop = 0;
+		soundShadersLimit = 2;
+		sound3DProcessingType = "WeaponMediumShotTail3DProcessingType";
+		distanceFilter = "CUP_rifleTailDistanceFilter";
+	};
+	class CUP_BoltActions_Louder_Tail_SoundSet
+	{
+		soundShaders[] = {"DMR06_tailForest_SoundShader","DMR06_tailHouses_SoundShader","DMR06_tailInterior_SoundShader","DMR06_tailMeadows_SoundShader","DMR06_tailTrees_SoundShader"};
+		volumeFactor = 1;
+		volumeCurve = "CUP_rifleSoundCurve";
+		occlusionFactor = 0.5;
+		obstructionFactor = 0.3;
+		spatial = 1;
+		doppler = 0;
+		loop = 0;
+		soundShadersLimit = 2;
+		sound3DProcessingType = "WeaponMediumShotTail3DProcessingType";
+		distanceFilter = "CUP_rifleTailDistanceFilter";
+	};
+};
+class CfgSoundCurves
+{
+	class CUP_closeShotCurve
+	{
+		points[] = {{0,1},{0.1,0.5613},{0.2,0.3502},{0.3,0.2309},{0.4,0.1569},{0.5,0.108},{0.6,0.0739},{0.7,0.0493},{0.8,0.0308},{0.9,0.0167},{1,0}};
+	};
+	class CUP_midShotCurve
+	{
+		points[] = {{0,0.2},{0.1,1},{0.2,0},{0.3,0},{0.4,0},{0.5,0},{0.6,0},{0.7,0},{0.8,0},{0.9,0},{1,0}};
+	};
+	class CUP_distShotCurve
+	{
+		points[] = {{0,0},{0.1,0},{0.2,1},{0.3,1},{0.4,1},{0.5,1},{0.6,1},{0.7,1},{0.8,1},{0.9,1},{1,1}};
+	};
+};
