@@ -1,0 +1,369 @@
+class CUP_optic_PSO_3_open
+{
+	author = "Community Upgrade Project";
+	dlc = "CUP_Weapons";
+	scope = 2;
+	displayName = "ПСО-3 (Без наглазника)";
+	picture = "\CUP\Weapons\CUP_Weapons_East_Attachments\PSO-1\data\UI\gear_acco_pso_3_ca.paa";
+	model = "CUP\Weapons\CUP_Weapons_East_Attachments\PSO-1\CUP_pso_3_open.p3d";
+	descriptionShort = "Дальнобойная Российская оптика<br />Увеличение: 8x";
+	weaponInfoType = "CBA_ScriptedOptic";
+	class CBA_ScriptedOptic
+	{
+		reticleTexture = "\CUP\Weapons\CUP_Weapons_East_Attachments\PSO-1\data\PSO3_reticle_ca.paa";
+		reticleTextureNight = "\CUP\Weapons\CUP_Weapons_East_Attachments\PSO-1\data\PSO3_reticle_n_ca.paa";
+		reticleTextureSize = 1.174;
+		manualReticleNightSwitch = 1;
+		bodyTexture = "\CUP\Weapons\CUP_Weapons_East_Attachments\pip_body\scope_body_ca.paa";
+		bodyTextureNight = "\CUP\Weapons\CUP_Weapons_East_Attachments\pip_body\scope_bodyNight_ca.paa";
+		bodyTextureSize = 1.95;
+	};
+	class ItemInfo
+	{
+		mass = 16;
+		optics = 1;
+		opticType = 2;
+		modelOptics = "\x\cba\addons\optics\cba_optic_big_90.p3d";
+		class OpticsModes
+		{
+			class PSO
+			{
+				opticsID = 1;
+				useModelOptics = 1;
+				opticsPPEffects[] = {"OpticsCHAbera2", "OpticsBlur3"};
+				opticsFlare = 1;
+				opticsDisablePeripherialVision = 1;
+				opticsZoomInit = "8 call (uiNamespace getVariable 'cba_optics_fnc_setOpticMagnificationHelper')";
+				opticsZoomMin = "8 call (uiNamespace getVariable 'cba_optics_fnc_setOpticMagnificationHelper')";
+				opticsZoomMax = "8 call (uiNamespace getVariable 'cba_optics_fnc_setOpticMagnificationHelper')";
+				distanceZoomMin = 200;
+				distanceZoomMax = 200;
+				discreteInitIndex = 0;
+				memoryPointCamera = "opticView";
+				visionMode[] = {"Normal"};
+				cameraDir = "";
+				discreteDistance[] = {100, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000};
+				discreteDistanceInitIndex = "3 call (uiNamespace getVariable 'cba_optics_fnc_setOpticMagnificationHelperZeroing')";
+			};
+		};
+		type = 201;
+		muzzlePos = "usti hlavne";
+		muzzleEnd = "konec hlavne";
+		allowedSlots[] = {801, 701, 901};
+		mountAction = "MountOptic";
+		unmountAction = "DismountOptic";
+		zeroingSound[] = {"\A3\Sounds_F\arsenal\sfx\shared\zeroing_knob_tick_plastic", "db0", 1, 5};
+		scope = 0;
+	};
+	inertia = 0.2;
+	ACE_ScopeHeightAboveRail = "4,40554";
+	ACE_ScopeAdjust_Vertical[] = {0, 0};
+	ACE_ScopeAdjust_Horizontal[] = {-10, 10};
+	ACE_ScopeAdjust_VerticalIncrement = 0.5;
+	ACE_ScopeAdjust_HorizontalIncrement = 0.5;
+	muzzles[] = {};
+	class Armory
+	{
+		disabled = 1;
+	};
+	type = 131072;
+	access = 3;
+	value = 2;
+	uiPicture = "";
+	ammo = "";
+	cursor = "";
+	cursorAim = "";
+	cursorSize = 1;
+	showAimCursorInternal = 1;
+	cursorAimOn = "";
+	laser = 0;
+	hiddenSelections[] = {};
+	hiddenSelectionsTextures[] = {};
+	hiddenUnderwaterSelections[] = {};
+	shownUnderwaterSelections[] = {};
+	hiddenUnderwaterSelectionsTextures[] = {};
+	simulation = "Weapon";
+	nameSound = "";
+	count = 0;
+	multiplier = 1;
+	burst = 1;
+	magazineReloadTime = 0;
+	reloadTime = 1;
+	magazineReloadSwitchPhase = 1;
+	sound[] = {"", 1, 1};
+	soundBegin[] = {"sound", 1};
+	soundBeginWater[] = {"sound", 1};
+	soundClosure[] = {"sound", 1};
+	soundEnd[] = {"sound", 1};
+	soundLoop[] = {"sound", 1};
+	soundContinuous = 0;
+	weaponSoundEffect = "";
+	soundBurst = 1;
+	drySound[] = {"", 1, 1};
+	zeroingSound[] = {"", 1, 1};
+	reloadSound[] = {"", 1, 1};
+	changeFiremodeSound[] = {"", 1, 1};
+	reloadMagazineSound[] = {"", 1, 1};
+	emptySound[] = {"", 1, 1};
+	soundBullet[] = {"emptySound", 1};
+	initSpeed = 0;
+	ballisticsComputer = 0;
+	irDistance = 0;
+	irDotIntensity = 0.001;
+	dispersion = 0.002;
+	aiDispersionCoefX = 1;
+	aiDispersionCoefY = 1;
+	canLock = 2;
+	lockAcquire = 1;
+	enableAttack = 1;
+	ffMagnitude = 0;
+	ffFrequency = 1;
+	ffCount = 1;
+	recoil = "empty";
+	recoilProne = "";
+	maxRecoilSway = 0.008;
+	swayDecaySpeed = 2;
+	modelSpecial = "";
+	modelMagazine = "";
+	muzzlePos = "usti hlavne";
+	muzzleEnd = "konec hlavne";
+	irLaserPos = "laser pos";
+	irLaserEnd = "laser dir";
+	cartridgePos = "nabojnicestart";
+	cartridgeVel = "nabojniceend";
+	selectionFireAnim = "zasleh";
+	memoryPointCamera = "eye";
+	fireSpreadAngle = 3;
+	useModelOptics = 1;
+	opticsID = 0;
+	modelOptics = "";
+	opticsPPEffects[] = {};
+	opticsFlare = 1;
+	optics = 1;
+	forceOptics = 0;
+	useAsBinocular = 0;
+	opticsDisablePeripherialVision = 0.67;
+	opticsZoomMin = 0.25;
+	opticsZoomMax = 1.25;
+	opticsZoomInit = 0.75;
+	distanceZoomMin = 400;
+	distanceZoomMax = 400;
+	primary = 10;
+	showSwitchAction = 0;
+	showEmpty = 1;
+	autoFire = 0;
+	autoReload = 1;
+	showToPlayer = 1;
+	canShootInWater = 0;
+	aiRateOfFire = 5;
+	aiRateOfFireDistance = 500;
+	aiRateOfFireDispersion = 0;
+	fireLightDuration = 0.05;
+	fireLightIntensity = 0.2;
+	fireLightDiffuse[] = {0.937, 0.631, 0.259};
+	fireLightAmbient[] = {0, 0, 0};
+	class Eventhandlers
+	{
+	};
+	backgroundReload = 0;
+	reloadAction = "";
+	magazines[] = {};
+	modes[] = {"this"};
+	useAction = 0;
+	useActionTitle = "";
+	canDrop = 1;
+	weaponLockDelay = 0;
+	weaponLockSystem = 0;
+	cmImmunity = 1;
+	weight = 0;
+	minRange = 1;
+	minRangeProbab = 0.3;
+	midRange = 150;
+	midRangeProbab = 0.58;
+	maxRange = 500;
+	maxRangeProbab = 0.04;
+	handAnim[] = {};
+	lockingTargetSound[] = {"", 0.000316228, 2};
+	lockedTargetSound[] = {"", 0.000316228, 6};
+	detectRange = 0;
+	artilleryDispersion = 1;
+	artilleryCharge = 1;
+	fireAnims[] = {};
+	class Library
+	{
+		libTextDesc = "";
+	};
+	class GunFire
+	{
+		access = 0;
+		cloudletDuration = 0.2;
+		cloudletAnimPeriod = 1;
+		cloudletSize = 1;
+		cloudletAlpha = 1;
+		cloudletGrowUp = 0.2;
+		cloudletFadeIn = 0.01;
+		cloudletFadeOut = 0.5;
+		cloudletAccY = 0;
+		cloudletMinYSpeed = -100;
+		cloudletMaxYSpeed = 100;
+		cloudletShape = "cloudletFire";
+		cloudletColor[] = {1, 1, 1, 0};
+		cloudletDensityCoef = -1;
+		interval = -0.01;
+		size = 3;
+		sourceSize = 0.5;
+		timeToLive = 0;
+		initT = 4500;
+		deltaT = -3000;
+		class Table
+		{
+			class T0
+			{
+				maxT = 0;
+				color[] = {0.82, 0.95, 0.93, 0};
+			};
+			class T1
+			{
+				maxT = 200;
+				color[] = {0.75, 0.77, 0.9, 0};
+			};
+			class T2
+			{
+				maxT = 400;
+				color[] = {0.56, 0.62, 0.67, 0};
+			};
+			class T3
+			{
+				maxT = 600;
+				color[] = {0.39, 0.46, 0.47, 0};
+			};
+			class T4
+			{
+				maxT = 800;
+				color[] = {0.24, 0.31, 0.31, 0};
+			};
+			class T5
+			{
+				maxT = 1000;
+				color[] = {0.23, 0.31, 0.29, 0};
+			};
+			class T6
+			{
+				maxT = 1500;
+				color[] = {0.21, 0.29, 0.27, 0};
+			};
+			class T7
+			{
+				maxT = 2000;
+				color[] = {0.19, 0.23, 0.21, 0};
+			};
+			class T8
+			{
+				maxT = 2300;
+				color[] = {0.22, 0.19, 0.1, 0};
+			};
+			class T9
+			{
+				maxT = 2500;
+				color[] = {0.35, 0.2, 0.02, 0};
+			};
+			class T10
+			{
+				maxT = 2600;
+				color[] = {0.62, 0.29, 0.03, 0};
+			};
+			class T11
+			{
+				maxT = 2650;
+				color[] = {0.59, 0.35, 0.05, 0};
+			};
+			class T12
+			{
+				maxT = 2700;
+				color[] = {0.75, 0.37, 0.03, 0};
+			};
+			class T13
+			{
+				maxT = 2750;
+				color[] = {0.88, 0.34, 0.03, 0};
+			};
+			class T14
+			{
+				maxT = 2800;
+				color[] = {0.91, 0.5, 0.17, 0};
+			};
+			class T15
+			{
+				maxT = 2850;
+				color[] = {1, 0.6, 0.2, 0};
+			};
+			class T16
+			{
+				maxT = 2900;
+				color[] = {1, 0.71, 0.3, 0};
+			};
+			class T17
+			{
+				maxT = 2950;
+				color[] = {0.98, 0.83, 0.41, 0};
+			};
+			class T18
+			{
+				maxT = 3000;
+				color[] = {0.98, 0.91, 0.54, 0};
+			};
+			class T19
+			{
+				maxT = 3100;
+				color[] = {0.98, 0.99, 0.6, 0};
+			};
+			class T20
+			{
+				maxT = 3300;
+				color[] = {0.96, 0.99, 0.72, 0};
+			};
+			class T21
+			{
+				maxT = 3600;
+				color[] = {1, 0.98, 0.91, 0};
+			};
+			class T22
+			{
+				maxT = 4200;
+				color[] = {1, 1, 1, 0};
+			};
+		};
+	};
+	class GunClouds
+	{
+		access = 0;
+		cloudletGrowUp = 0.05;
+		cloudletFadeIn = 0;
+		cloudletFadeOut = 0.1;
+		cloudletDuration = 0.05;
+		cloudletAlpha = 0.3;
+		cloudletAccY = 0;
+		cloudletMinYSpeed = -100;
+		cloudletMaxYSpeed = 100;
+		interval = -0.02;
+		size = 0.3;
+		sourceSize = 0.02;
+		cloudletAnimPeriod = 1;
+		cloudletSize = 1;
+		cloudletShape = "cloudletClouds";
+		cloudletColor[] = {1, 1, 1, 0};
+		timeToLive = 0;
+		initT = 0;
+		deltaT = 0;
+		class Table
+		{
+			class T0
+			{
+				maxT = 0;
+				color[] = {1, 1, 1, 0};
+			};
+		};
+	};
+	textureType = "default";
+	aimTransitionSpeed = 1;
+};
